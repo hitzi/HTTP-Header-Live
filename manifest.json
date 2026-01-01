@@ -1,9 +1,9 @@
 {
 	"manifest_version": 2,
 	"name": "__MSG_extensionName__",
-	"version": "0.6.5.2",
-	"author": "Martin Antrag",
-	"homepage_url":"https://github.com/Nitrama/HTTP-Header-Live/",
+	"version": "0.6.5.3",
+	"author": "Martin Antrag, Christoph Lehnberger",
+	"homepage_url":"https://github.com/hitzi/HTTP-Header-Live",
 	"default_locale": "en",
 	"options_ui": {
 		"page": "options.html"
@@ -32,13 +32,20 @@
 			"64": "icons/64.png"
 		}
 	},
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "{ed102056-8b4f-43a9-99cd-ad1b25aae87e}",
+            "data_collection_permissions": {
+              "required": [
+                 "browsingActivity"
+              ],
+              "optional": [
+                 "technicalAndInteraction"
+              ]
+             }
+          }
+      },
 	"background": {
 		"scripts": ["background.js"]
-	},
-	"applications":{
-		"gecko":{
-			"id": "{ed102056-8b4f-43a9-99cd-6d1b25abe87e}",
-			"strict_min_version": "54.0"
-		}
 	}
 }
