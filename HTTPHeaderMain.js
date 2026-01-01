@@ -241,7 +241,7 @@ function clicked_data(requestID, id) {
       height: 600,
       width: 800,
       type: "popup",
-      url: chrome.extension.getURL("HTTPHeaderSub.html")
+      url: (browser || chrome).runtime.getURL("HTTPHeaderSub.html")
     },
     function(windowscreate) {
       TAB_ID = windowscreate.tabs[0].id;

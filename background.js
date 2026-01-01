@@ -4,7 +4,7 @@ function NewWindow() {
 		height:600,
 		width:800,
 		type:"popup",
-		url:chrome.extension.getURL("HTTPHeaderMain.html")
+		url:(browser || chrome).runtime.getURL("HTTPHeaderMain.html")
     });
 }
 chrome.browserAction.onClicked.addListener(NewWindow);	
